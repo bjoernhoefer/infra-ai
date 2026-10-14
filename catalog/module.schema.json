@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Module catalog entry",
+  "type": "object",
+  "required": ["name", "resourceType", "repository", "version", "inputs", "outputs"],
+  "properties": {
+    "name": { "type": "string" },
+    "resourceType": { "type": "string", "description": "Azure resource type, e.g. Microsoft.Storage/storageAccounts" },
+    "repository": { "type": "string" },
+    "version": { "type": "string" },
+    "avmSource": { "type": "string" },
+    "inputs": { "type": "object" },
+    "outputs": { "type": "object" },
+    "security": {
+      "type": "object",
+      "properties": {
+        "publicAccess": { "type": "boolean" },
+        "privateEndpointSupport": { "type": "boolean" }
+      }
+    }
+  }
+}
